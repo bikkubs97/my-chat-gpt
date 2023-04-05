@@ -90,7 +90,7 @@ function App() {
     
       <section className='main'>
         {!currentTitle&&<h1>My ChatGPT</h1>}
-        <h3>{loadState}</h3>
+        <h4>{loadState}</h4>
       
           <ul className='feed'>
               {currentChat?.map((chatMessage, index)=><li key={index}>

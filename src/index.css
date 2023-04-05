@@ -136,3 +136,7 @@ margin: 1rem;
 .sidebar li:hover{
  color: rgb(0, 217, 255);
 }
+.load{
+  position: fixed;
+  top: 0.5rem;
+}
