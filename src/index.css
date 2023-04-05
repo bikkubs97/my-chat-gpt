@@ -20,6 +20,7 @@ body{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  overflow: scroll;
 
  }
 
@@ -111,8 +112,11 @@ input:focus{
 }
 .feed li{
   display: flex;
- padding: 20px;
- margin: 20px;
+ padding: 10px;
+
+width: 100%;
+border: 1px solid white;
+margin: 1rem;
  
 }
 
@@ -122,9 +126,11 @@ input:focus{
 
 .feed p.role{
   min-width: 100px;
+  color: rgb(0, 217, 255);
 }
 .sidebar li{
   width: 100%;
+
 }
 .sidebar li:hover{
  color: rgb(0, 217, 255);
