@@ -20,7 +20,8 @@ body{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: none;
 
  }
 
