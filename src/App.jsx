@@ -7,6 +7,7 @@ function App() {
   const [message, setMessage] = useState(null)
   const [previousChats, setPreviousChats] = useState([])
   const [currentTitle, setCurrentTitle] = useState([])
+  const [loadState, setLoadState]= useState("")
   
   function createNewChat(){
     setMessage(null)
@@ -30,11 +31,13 @@ function App() {
           "Content-Type" : "application/json"
         }
       }
+      setLoadState("Let me think.....Please Wait....!")
       try{
         const response = await fetch('https://my-chat-gpt-bbxs.onrender.com/completions', options)
         const data = await response.json()
         console.log(data)
         setMessage(data.choices[0].message)
+        setLoadState("")
       }catch(err){
         console.error(err)
       }
@@ -87,6 +90,8 @@ function App() {
     
       <section className='main'>
         {!currentTitle&&<h1>My ChatGPT</h1>}
+        <h3>{loadState}</h3>
+      
           <ul className='feed'>
               {currentChat?.map((chatMessage, index)=><li key={index}>
                 <p className='role'>{chatMessage.role}</p>
