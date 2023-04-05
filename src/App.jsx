@@ -31,7 +31,7 @@ function App() {
         }
       }
       try{
-        const response = await fetch('http://localhost:3000/completions', options)
+        const response = await fetch('https:/my-chat-gpt-bbxs.onrender.com/completions', options)
         const data = await response.json()
         console.log(data)
         setMessage(data.choices[0].message)
