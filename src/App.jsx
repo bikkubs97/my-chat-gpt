@@ -33,7 +33,7 @@ function App() {
       }
       setLoadState("Let me think.....Please Wait....!")
       try{
-        const response = await fetch('https://my-chat-gpt-bbxs.onrender.com/completions', options)
+        const response = await fetch('https://chat-gpt-server-76da.onrender.com/completions', options)
         const data = await response.json()
         console.log(data)
         setMessage(data.choices[0].message)
